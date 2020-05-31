@@ -1,0 +1,444 @@
+
+/* переменные */
+
+.section-padding {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+/* компоненты */
+.button {
+    width: 180px;
+    height: 52px;
+    color: white;
+    background-color:  #0F4E96;
+    border: 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: .3s ;
+}
+.button:hover {
+    color: rgb(241, 168, 57);
+}
+.mark__button {
+    background-color: white;
+    border: none;
+}
+.button__calendar {
+    background-color: white;
+    border: none;
+}
+.button__triangle {
+    background-color: white;
+    border: none;
+}
+.button__back {
+    position: absolute;
+    left: -350px;
+    background-color: white;
+    border: none;
+}
+/* !первый экран */
+.header {
+    height: 926px;
+    background-image: url(../img/324002\ 1.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+.logo {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: -22%;
+}
+.title {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif, open-sans;
+    font-size: 42px;
+    font-weight: 700;
+    color: #4D4242;
+    position: absolute;
+    width: 380px;
+    right: -15%;
+    margin-top: -20%;
+    text-transform: uppercase;
+    text-align: right;
+}
+.navigation__button {
+    position: absolute;
+    font-size: 25px;
+    font-weight: 400;
+    width: 300px;
+    height: 80px;
+    margin-top: -3%;
+    right: -15%;
+    text-transform: uppercase;
+    border-color: #0F4E96;
+    color:  #0F4E96;
+    background-color:  white;
+    border-radius: 10px;
+    transition: .2s ;
+}
+.navigation__button:hover {
+    font-weight: 600;
+    color: rgb(241, 168, 57);
+}    
+.navigation_left {
+    margin-top: 30%;
+    margin-left: -23%;
+}
+.navigation_right {
+    position: absolute;
+    width: 650px;
+    justify-content: space-between;
+    top: 35px;
+    font-size: 23px;
+    margin-left: 74%;
+}
+.home {
+    width: 60px;
+    margin-top: 20px;
+}
+.menu__item:hover .home{
+    width: 65px;
+    background: url(../img/home.svg);
+     
+}
+.jacket {
+    width: 60px;
+    margin-top: 20px;
+}
+.menu__item:hover .jacket{
+    width: 65px;
+    background: url(../img/jacket1.svg); 
+}
+.skiing {
+    width: 60px;
+    margin-top: 20px;
+}
+.menu__item:hover .skiing{
+    width: 65px;
+    background: url(../img/skiing1.svg); 
+}
+.route {
+    width: 60px;
+    margin-top: 20px;
+}
+.menu__item:hover .route{
+    width: 65px;
+    background: url(../img/route1.svg);
+}
+
+.menu__item {
+    width: 300px;
+    height: 100px;
+    text-transform: uppercase;
+    display: block;
+    background-color: #0F4E96;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: .3s ;
+}
+.menu__item:hover {
+    width: 350px;
+}
+.menu__link {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.menu__link_right  {
+    color: rgb(37, 33, 33);
+    transition: .3s ;
+}
+.menu__link_right:hover {
+    color: rgb(241, 168, 57);
+    text-decoration: none; 
+}
+.menu__item_right {
+    text-transform: uppercase;
+    display: block;
+    width: 500px;
+    font-weight: 300;
+}
+
+/* ! контакты */
+.contact__name {
+    width: 400px;
+    height: 50px;
+    color: #b7b7b7;
+    font-size: 28px;
+    padding: 10px;
+    padding-left: 20px;
+    /* float: left; */
+    border-color: #0F4E96;
+    border-radius: 10px;
+}
+.contact__email {
+    width: 400px;
+    height: 50px;
+    color: #b7b7b7;
+    font-size: 28px;
+    padding: 10px;
+    padding-left: 20px;
+    border-color: #0F4E96;
+    border-radius: 10px;
+}
+.contact__button {
+    width: 300px;
+    height: 52px;
+    color: white;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: #0F4E96;
+    border: 0px;
+    text-transform: uppercase;
+    transition: .3s ;
+}
+.contact__button:hover {
+    color: rgb(241, 168, 57);
+}
+
+/*! котеджи */
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height:1.55;
+}
+h2 {
+    font-size: 26px;
+    font-weight: 700;
+}
+.cottage__text {
+    font-size: 24px;
+    font-weight: 400;
+}
+.cottage__wrap  {
+    margin-top: 120px;
+}
+.subtitle {
+    width: 470px;
+    height: 90px;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: #0F4E96;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    align-items: center;
+    margin-left: -50px;
+}
+p {
+    font-size: 23px;
+    font-weight: 400;
+    display: inline-block;
+}
+.note {
+    font-size: 24px;
+    font-weight: 600;
+}
+.options {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 250px;
+}
+.to_book__menu {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 250px;
+}
+.contact__people {
+    width: 300px;
+    height: 50px;
+    color: #b7b7b7;
+    font-size: 22px;
+    padding: 5px;
+    padding-left: 10px;
+    border-color: #0F4E96;
+    border-radius: 8px;
+}
+.contact__from {
+    width: 200px;
+    height: 50px;
+    color: #b7b7b7;
+    font-size: 22px;
+    padding: 5px;
+    padding-left: 10px;
+    border-color: #0F4E96;
+    border-radius: 8px;
+}
+.contact__variable {
+    width: 80px;
+    height: 50px;
+    color: #b7b7b7;
+    font-size: 22px;
+    padding: 5px;
+    padding-left: 10px;
+    border-color: #0F4E96;
+    border-radius: 10px;
+}
+.contact__day {
+    width: 60px;
+    height: 50px;
+    color: #4D4242;
+    font-size: 22px;
+    padding: 5px;
+    padding-left: 10px;
+    border: 0px;
+    border-radius: 10px;
+}
+
+/*! дисконт */
+.discount {
+    background-image: url(../img/discount.svg);
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height: 550px; 
+    text-decoration: none;
+}
+.discount__item {
+    text-transform: uppercase;
+    display: block;
+    width: 570px;
+    height: 240px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif, open-sans;
+    font-size: 42px;
+    font-weight: 700;
+    position: absolute;
+    right: 8%;
+    text-align: center;
+    margin-top: 5%; 
+}
+.discount__link {
+    width: 570px;
+    height: 240px;
+    color: white;
+    transition: .3s ;
+}
+.discount__link:hover {
+    text-decoration: none;
+    color: rgb(241, 168, 57);
+}
+.percentage {
+    font-size: 70px;
+}
+/*! тренер */
+.services__options {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 200px;
+}
+.services__to_book {
+    margin-left: 170px;
+}
+
+ /*! о нас */
+ .about_us__img {
+    height: 770px;
+    width: 100%;
+    background-image: url(../img/about_us.svg);
+    border-radius: 10px;
+ }
+ .about_us__text {
+     width: 560px;
+     height: 350px;
+     font-size: 28px;
+     margin-left: 140px;
+     font-weight: 400;
+     background-color: #F7F7F7;
+ }
+ .about_us__wrap {
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 180px;
+    width: 100%;
+ }
+
+ /* !контакты */
+ .contacts-wrap  {
+     height: 800px;
+     width: 1440px;
+    background-image: url(../img/contacts\ .svg);
+    border: none;
+    border-radius: 10px;
+ }
+.contacts__text {
+    color: white;
+    background-color:  #3378C7;
+    border-radius: 20px;
+    width: 500px;
+    height: 470px;
+    font-size: 23px;
+    padding: 20px 60px 0px 30px;
+    line-height:1.8;
+}
+.contacts__map {
+    width: 400px;
+    height: 50px;
+    font-weight: 600;
+    font-size: 28px;
+    border-radius: 10px;
+    border: none;
+}
+.consultation__tel {
+    width: 300px;
+    height: 50px;
+    color: #b7b7b7;
+    font-size: 22px;
+    padding: 5px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 8px;
+}
+.consultation__name {
+    border: none;
+    border-radius: 8px;
+}
+.consultation {
+    position: absolute;
+    bottom: 25px;
+}
+.consultation__button {
+    width: 300px;
+    height: 50px;
+    color: white;
+    font-size: 22px;
+    padding: 5px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3378C7;
+    transition: .3s ;
+}
+.consultation__button:hover {
+    color: rgb(241, 168, 57);
+}
+h3 {
+    position: absolute;
+    top: 50px;
+    font-size: 80px;
+    color: white;
+    margin-left: 10%;
+}
+hr {
+    margin-top: 60px;
+    color: #3378C7;
+    width: 650px;
+}
+
+ /*! футер */
+ .footer {
+     background-color: #3378C7;
+     color: white;
+ }
+ .footer__text {
+     width: 100%;
+     padding: 25px 0 20px 0;
+ } 
+ 
