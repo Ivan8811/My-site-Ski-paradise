@@ -47,12 +47,17 @@
     background-position: center;
     width: 100%;
 }
+.header__wrapper {
+    position: relative;
+}
 .logo {
-    position: absolute;
     margin-top: 40px;
     margin-left: -22%;
 }
 .title {
+    margin-top: -10%;
+}
+.title_text {
     font-family: "Montserrat", Arial, Helvetica, sans-serif, open-sans;
     font-size: 42px;
     font-weight: 700;
@@ -60,7 +65,7 @@
     position: absolute;
     width: 380px;
     right: -15%;
-    margin-top: -20%;
+    margin-top: -17%;
     text-transform: uppercase;
     text-align: right;
 }
@@ -70,7 +75,6 @@
     font-weight: 400;
     width: 300px;
     height: 80px;
-    margin-top: -3%;
     right: -15%;
     text-transform: uppercase;
     border-color: #0F4E96;
@@ -84,6 +88,7 @@
     color: rgb(241, 168, 57);
 }    
 .navigation_left {
+    max-width: 350px;
     margin-top: 30%;
     margin-left: -23%;
 }
@@ -95,49 +100,14 @@
     font-size: 23px;
     margin-left: 74%;
 }
-.home {
-    width: 60px;
-    margin-top: 20px;
-}
-.menu__item:hover .home{
-    width: 65px;
-    background: url(../img/home.svg);
-     
-}
-.jacket {
-    width: 60px;
-    margin-top: 20px;
-}
-.menu__item:hover .jacket{
-    width: 65px;
-    background: url(../img/jacket1.svg); 
-}
-.skiing {
-    width: 60px;
-    margin-top: 20px;
-}
-.menu__item:hover .skiing{
-    width: 65px;
-    background: url(../img/skiing1.svg); 
-}
-.route {
-    width: 60px;
-    margin-top: 20px;
-}
-.menu__item:hover .route{
-    width: 65px;
-    background: url(../img/route1.svg);
-}
 
 .menu__item {
     width: 300px;
-    height: 100px;
-    text-transform: uppercase;
-    display: block;
+    display: inline-block;
     background-color: #0F4E96;
     border-radius: 20px;
     margin-bottom: 20px;
-    transition: .3s ;
+    transition: all .3s;
 }
 .menu__item:hover {
     width: 350px;
@@ -145,8 +115,50 @@
 .menu__link {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    align-items: center;
+    height: 100px;
 }
+.menu__icon_home {
+    height: 60px;
+    width: 60px;
+    background-image: url(../img/home_1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.icon__home:hover .menu__icon_home{
+    background-image: url(../img/home.svg);
+}
+.menu__icon_jacket {
+    height: 60px;
+    width: 60px;
+    background-image: url(../img/jacket.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.icon__jacket:hover .menu__icon_jacket{
+    background-image: url(../img/jacket1.svg);
+}
+.menu__icon_skiing {
+    height: 60px;
+    width: 60px;
+    background-image: url(../img/skiing.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.icon__skiing:hover .menu__icon_skiing{
+    background-image: url(../img/skiing1.svg);
+}
+.menu__icon_route {
+    height: 60px;
+    width: 60px;
+    background-image: url(../img/route.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.icon__route:hover .menu__icon_route{
+    background-image: url(../img/route1.svg);
+}
+
 .menu__link_right  {
     color: rgb(37, 33, 33);
     transition: .3s ;
@@ -162,19 +174,8 @@
     font-weight: 300;
 }
 
-/* ! контакты */
-.contact__name {
-    width: 400px;
-    height: 50px;
-    color: #b7b7b7;
-    font-size: 28px;
-    padding: 10px;
-    padding-left: 20px;
-    /* float: left; */
-    border-color: #0F4E96;
-    border-radius: 8px;
-}
-.contact__email {
+/* ! регистрация */
+.registration__name {
     width: 400px;
     height: 50px;
     color: #b7b7b7;
@@ -184,7 +185,17 @@
     border-color: #0F4E96;
     border-radius: 8px;
 }
-.contact__button {
+.registration__email {
+    width: 400px;
+    height: 50px;
+    color: #b7b7b7;
+    font-size: 28px;
+    padding: 10px;
+    padding-left: 20px;
+    border-color: #0F4E96;
+    border-radius: 8px;
+}
+.registration__button {
     width: 300px;
     height: 52px;
     color: white;
@@ -195,17 +206,17 @@
     text-transform: uppercase;
     transition: .3s ;
 }
-.contact__button:hover {
+.registration__button:hover {
     color: rgb(241, 168, 57);
 }
 
 /*! котеджи */
-h1 {
+.title1 {
     font-size: 28px;
     font-weight: 700;
     line-height:1.55;
 }
-h2 {
+.title2 {
     font-size: 26px;
     font-weight: 700;
 }
@@ -254,7 +265,7 @@ p {
 .contact__people {
     width: 300px;
     height: 50px;
-    color: #b7b7b7;
+    color:  #0F4E96;
     font-size: 22px;
     padding: 5px;
     padding-left: 10px;
@@ -264,7 +275,7 @@ p {
 .contact__from {
     width: 200px;
     height: 50px;
-    color: #b7b7b7;
+    color:  #0F4E96;
     font-size: 22px;
     padding: 5px;
     padding-left: 10px;
@@ -274,13 +285,33 @@ p {
 .contact__variable {
     width: 80px;
     height: 50px;
-    color: #b7b7b7;
-    font-size: 22px;
+    color:  #0F4E96;
+    font-size: 28px;
     padding: 5px;
-    padding-left: 10px;
+    font-weight: 500;
     border-color: #0F4E96;
     border-radius: 10px;
+    padding-left: 22px;
 }
+.contact__variable_day {
+    width: 80px;
+    height: 50px;
+    color:  #0F4E96;
+    font-size: 22px;
+    padding: 5px;
+    font-weight: 500;
+    border-color: #0F4E96;
+    border-radius: 10px;
+    padding-left: 22px;
+}
+.mark__button {
+    background-color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    transition: .3s;
+}
+
 .contact__day {
     width: 60px;
     height: 50px;
@@ -291,7 +322,16 @@ p {
     border: 0px;
     border-radius: 10px;
 }
-
+.contact__money {
+    width: 60px;
+    height: 50px;
+    color: #4D4242;
+    font-size: 28px;
+    padding: 5px;
+    padding-left: 10px;
+    border: 0px;
+    border-radius: 10px;
+}
 /*! дисконт */
 .discount {
     background-image: url(../img/discount.svg);
@@ -375,7 +415,7 @@ p {
     width: 500px;
     height: 470px;
     font-size: 23px;
-    padding: 20px 60px 0px 30px;
+    padding: 20px 60px -5px 30px;
     line-height:1.8;
 }
 .contacts__map {
@@ -385,6 +425,16 @@ p {
     font-size: 28px;
     border-radius: 10px;
     border: none;
+    display: block;
+    background-color: white;
+}
+.map__link {
+   color:#3378C7; 
+   transition: .3s ;
+}
+.map__link:hover {
+    color: rgb(241, 168, 57);
+    text-decoration: none;
 }
 .consultation__tel {
     width: 300px;
@@ -419,7 +469,7 @@ p {
 .consultation__button:hover {
     color: rgb(241, 168, 57);
 }
-h3 {
+.title3 {
     position: absolute;
     top: 50px;
     font-size: 80px;
