@@ -12,12 +12,9 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
     crossorigin="anonymous">        
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <script src="script.js"></script> -->
-
 </head>
 
 <body>
-    
     <header class="header container-fluid">
         <div class="container">
             <div class="row">
@@ -70,7 +67,7 @@
                     <form action="#">
                        <input class="registration__name"type="text" placeholder="Name" >
                     <input class="registration__email"type="email"placeholder="Email" > 
-                    <button class="registration__button">registration</button> 
+                    <input class="registration__button" type="submit" value="registration">
                     </form>
                 </div>
             </div>
@@ -79,48 +76,124 @@
     <section class="cottage section-padding">
         <div class="container">
             <div class="row">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="subtitle mb-5">cottage</div> 
+                    </div>
+                </div>
                 <div class="col-12 d-flex justify-content-between align-items-center">
-                    <div class="cottage__img col-6 mr-5">
-                        <div class="subtitle mb-5">cottage</div>  
+                    <div class="cottage__img mr-auto mr-5"> 
                         <image src="img/home1.1_(5)_1.svg" alt="home">
                     </div>
-                    <div class="cottage__wrap col-6 ml-5">
-                        <div class="title1">Сottage for 2 people.</div> 
+                    <div class="cottage__wrap pt-5 ml-4 pb-5">
+                        <div class="cottage__title">Сottage for 2 people.</div> 
+                        <div class="cottage__text">
+                            Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.
+                            Сonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage. 
+                          <div class="cottage__text_addition">Vacation with friends / Family holiday.</div> 
+                        </div>
+                    </div>
+                </div>
+                <!-- почему если "amenities col-12.." обернуть еще в один "row" то "d-flex.." не работает, так его нельзя оставить?  -->
+                <div class="amenities col-12 mt-4 d-flex justify-content-center align-items-center">
+                    <div class="amenities_title">Amenities</div>
+                </div>                 
+                <div class="row">
+                    <div class="col-12 d-flex align-items-center mt-5">
+                        <form class="options" name="Sum">
+                            <div class="markup d-flex align-items-center">
+                                <div>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>     
+                                </div>
+                                <div>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>  
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mt-5">
+                                    <div class="to_book__menu">
+                                        <!-- я добавил атрибут maxlenght, min и max, но оно похоже не работает., или оно просто не отправиться если условие не будет выполнено? -->
+                                        <input class="contact__people"type="number"min="<1>"max="<10>"placeholder="How many people" >
+                                        <input class="contact__from ml-5"type="date"placeholder="from" >
+                                        <input class="contact__to contact__from ml-4"type="date" placeholder="to"><br>
+                                        <input class="contact__names contact__people mt-4"type="text"maxlength="<15>"placeholder="Name" >
+                                        <input class="contact__tel contact__from mt-4 ml-5"type="tel"placeholder="Tel" >
+                                        <input class="contact__variable_day mt-4 ml-4"type="number"min="<1>"max="<10>"placeholder="1" >
+                                        <p class="contact__day mt-4">day =</p>
+                                        <output class="contact__variable mt-4" id="rezultat">0</output>
+                                        <p class="contact__money mt-4">$</p>
+                                        <button class="button">to book</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </section>
+    <section class="cottage section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                    <div class="cottage__img order-12 mr-auto mr-5"> 
+                        <image src="img/home2.svg" alt="home">
+                    </div>
+                    <div class="cottage__wrap pt-5 mr-4 pb-5">
+                        <div class="cottage__title">Сottage for 2-5 people.</div> 
 
                         <div class="cottage__text">
                             Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.
-                            Сonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.<br> 
-                          <span class="note">Vacation with friends / Family holiday.</span> 
+                            Сonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage. 
+                          <div class="cottage__text_addition">Vacation with friends / Family holiday.</div> 
                         </div>
                     </div>
                 </div>
-                <div class="Amenities col-12 mt-4 d-flex justify-content-center align-items-center">
-                    <div class="title2">Amenities</div>
+                <div class="amenities col-12 mt-4 d-flex justify-content-center align-items-center">
+                    <div class="amenities_title">Amenities</div>
                 </div>                 
+                <div class="row">
                     <div class="col-12">
                         <form class="options col-12 d-flex justify-content-between align-items-center mt-5" name="Sum">
-                        <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>   
+                            <div class="markup d-flex align-items-center">
+                                <div>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>     
+                                </div>
+                                <div>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>  
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mt-5">
+                                    <div class="to_book__menu">
+                                        <input class="contact__people"type="number"min="<1>"max="<10>"placeholder="How many people" >
+                                        <input class="contact__from ml-5"type="date"placeholder="from" >
+                                        <input class="contact__to contact__from ml-4"type="date" placeholder="to"><br>
+                                        <input class="contact__names contact__people mt-4"type="text"maxlength="<15>"placeholder="Name" >
+                                        <input class="contact__tel contact__from mt-4 ml-5"type="tel"placeholder="Tel" >
+                                        <input class="contact__variable_day mt-4 ml-4"type="number"min="<1>"max="<10>"placeholder="1" >
+                                        <p class="contact__day mt-4">day =</p>
+                                        <output class="contact__variable mt-4" id="rezultat">0</output>
+                                        <p class="contact__money mt-4">$</p>
+                                        <button class="button">to book</button>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
-                    <div class="to_book__menu col-12 ml-5 mt-5">
-                        <input class="contact__people"type="number" placeholder="How many people" >
-                        <input class="contact__from ml-5"type="date"placeholder="from" >
-                        <input class="contact__to contact__from ml-4"type="date" placeholder="to"><br>
-                        <input class="contact__names contact__people mt-4"type="text" placeholder="Name" >
-                        <input class="contact__tel contact__from mt-4 ml-5"type="tel"placeholder="Tel" >
-                        <input class="contact__variable_day mt-4 ml-4"type="number"placeholder="1" >
-                        <input class="contact__day mt-4"type="text"placeholder="day =" >
-                        <output class="contact__variable mt-4" id="rezultat">0</output>
-                        <input class="contact__money mt-4" type="text"placeholder="$" >
-                        <button class="button">to book</button>
-                    </div>
+                </div> 
             </div>
         </div>
     </section>
@@ -128,167 +201,151 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 d-flex justify-content-between align-items-center">
-                    <div class="cottage__right col-6 ml-5">
-                        <div class="title2">Сottage for 2-5 people.</div>
+                    <div class="cottage__img mr-auto mr-5"> 
+                        <image src="img/home3.svg" alt="home">
+                    </div>
+                    <div class="cottage__wrap ml-4 pt-5 pb-5">
+                        <div class="cottage__title">Сottage for 6-10 people.</div> 
+
                         <div class="cottage__text">
                             Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.
-                            Сonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.<br> 
-                          <span class="note">Vacation with friends / Family holiday.</span> 
+                            Сonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage. 
+                          <div class="cottage__text_addition">Vacation with friends / Family holiday.</div> 
                         </div>
                     </div>
-                    <div class="cottage__img col-6 mr-5">
-                        <img src="img/home2.svg" alt="home">
-                    </div>
                 </div>
-                <div class="Amenities col-12 mt-4 d-flex justify-content-center align-items-center">
-                    <div class="title2">Amenities</div>
-                </div>
+                <div class="amenities col-12 mt-4 d-flex justify-content-center align-items-center">
+                    <div class="amenities_title">Amenities</div>
+                </div>  
+                <div class="row">
                     <div class="col-12">
                         <form class="options col-12 d-flex justify-content-between align-items-center mt-5" name="Sum">
-                            <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                            <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                            <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                            <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                            <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                            <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                            <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>
-                            <p><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</p>   
-                            </form>
+                            <div class="markup d-flex align-items-center">
+                                <div>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>     
+                                </div>
+                                <div>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox"value="10"/>  20m ad minim veniam</label>  
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mt-5">
+                                    <div class="to_book__menu">
+                                        <input class="contact__people"type="number"min="<1>"max="<10>"placeholder="How many people" >
+                                        <input class="contact__from ml-5"type="date"placeholder="from" >
+                                        <input class="contact__to contact__from ml-4"type="date" placeholder="to"><br>
+                                        <input class="contact__names contact__people mt-4"type="text"maxlength="<15>"placeholder="Name" >
+                                        <input class="contact__tel contact__from mt-4 ml-5"type="tel"placeholder="Tel" >
+                                        <input class="contact__variable_day mt-4 ml-4"type="number"min="<1>"max="<10>"placeholder="1" >
+                                        <p class="contact__day mt-4">day =</p>
+                                        <output class="contact__variable mt-4" id="rezultat">0</output>
+                                        <p class="contact__money mt-4">$</p>
+                                        <button class="button">to book</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <div class="to_book__menu col-12 ml-5 mt-5">
-                        <input class="contact__people"type="number" placeholder="How many people" >
-                        <input class="contact__from ml-5"type="date"placeholder="from" >
-                        <input class="contact__to contact__from ml-4"type="date" placeholder="to"><br>
-                        <input class="contact__names contact__people mt-4"type="text" placeholder="Name" >
-                        <input class="contact__tel contact__from mt-4 ml-5"type="tel"placeholder="Tel" >
-                        <input class="contact__variable_day mt-4 ml-4"type="number"placeholder="1" >
-                        <input class="contact__day mt-4"type="text"placeholder="day =" >
-                        <output class="contact__variable mt-4" id="rezultat">0</output>
-                        <input class="contact__money mt-4" type="text"placeholder="$" >
-                        <button class="button">to book</button>
-            
-                    </div>
-            </div>
-        </div>
-    </section>
-    <section class="cottage section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 d-flex justify-content-between align-items-center">
-                    <div class="cottage__img col-6 mr-5">
-                        <img src="img/home3.svg" alt="home">
-                    </div>
-                    <div class="cottage__right col-6 ml-5">
-                        <div class="title1">Сottage for 6-10 people.</div> 
-                        <div class="cottage__text">
-                            Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.
-                            Сonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.<br> 
-                          <span class="note">Vacation with friends / Family holiday.</span> 
-                        </div>
-                    </div>
-                </div>
-                <div class="Amenities col-12 mt-4 d-flex justify-content-center align-items-center">
-                    <div class="title2">Amenities</div>
-                </div>
-                    <div class="options col-12 d-flex justify-content-between align-items-center mt-5">
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                    </div>
-                    <div class="to_book__menu col-12 ml-5 mt-5">
-                        <input class="contact__people"type="number" placeholder="How many people" >
-                        <input class="contact__from ml-5"type="date"placeholder="from" >
-                        <input class="contact__to contact__from ml-4"type="date" placeholder="to"><br>
-                        <input class="contact__names contact__people mt-4"type="text" placeholder="Name" >
-                        <input class="contact__tel contact__from mt-4 ml-5"type="tel"placeholder="Tel" >
-                        <input class="contact__variable_day mt-4 ml-4"type="number"placeholder="1" >
-                        <input class="contact__day mt-4"type="text"placeholder="day =" >
-                        <input class="contact__variable mt-4"type="text"placeholder="90" >
-                        <input class="contact__money mt-4" type="text"placeholder="$" >
-                        <button class="button">to book</button>
-                    </div>
+                </div>                 
             </div>
         </div>
     </section>
     <section class="discount section-padding container-fluid">
-        <li class="discount__item"><a href="#" class="discount__link">7 days subscription 
-           <span class="percentage">20%</span> discount</a>
-    </section>
-    <section class="ski__trainers section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-12 d-flex justify-content-between align-items-center">
-                    <div class="col-8 mr-5">
-                      <div class="subtitle mb-5">sky trainers</div> 
-                      <img src="img/sky__trainers1.svg" alt="trainers">   
-                    </div>
-                    <div class="col-4 cottage__wrap">
-                        <div class="title1">Ski trainer Elena.</div>
-                        <div class="cottage__text">
-                            Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.
-                            Сonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.<br> 
-                          <span class="note">Vacation with friends / Family sky trainer.</span> 
-                        </div>
-                    </div>
-                </div>
-                <div class="services col-12 mt-4 d-flex justify-content-center align-items-center">
-                    <div class="title2">Сoach services</div>
-                    </div>
-                    <div class="services__options col-12 d-flex justify-content-between align-items-center mt-5">
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <div class="services__to_book">
-                        <input class="contact__variable_day ml-4"type="number"placeholder="1" >
-                        <input class="contact__day "type="text"placeholder="day =" >
-                        <input class="contact__variable "type="text"placeholder="120" >
-                        <input class="contact__money "type="text"placeholder="$" >
-                        <button class="button">to book</button>
-                    </div>
-                    </div>      
+           <div class="discount__item"><a href="#" class="discount__link">7 days subscription 
+           <span class="percentage">20%</span> discount</a></div>
             </div>
         </div>
     </section>
     <section class="ski__trainers section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-12 d-flex justify-content-between align-items-center"> 
-                    <div class="col-4">
-                        <div class="title1">Ski trainer Alex.</div>
+                <div class="subtitle mb-5">sky trainers</div> 
+                   <div class="col-12 d-flex justify-content-between align-items-center">
+                        <div class="sky__trainers_img mr-5">
+                            <img src="img/sky__trainers1.svg" alt="trainers">
+                        </div>
+                        <div class="cottage__wrap mr-auto">
+                        <div class="ski__trainers_title cottage__title">Ski trainer Elena.</div>
                         <div class="cottage__text">
                             Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.
-                            Сonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.<br> 
-                          <span class="note">Vacation with friends / Family sky trainer.</span> 
+                            Сonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.
+                          <div class="cottage__text_addition">Vacation with friends / Family sky trainer.</div> 
                         </div>
                     </div>
-                    <div class="col-8">
-                      <img src="img/ski_trainers2.svg" alt="trainers">   
+                </div> 
+                    <div class=" col-12 d-flex justify-content-center align-items-center">
+                    <div class="services_title amenities_title mt-4 ">Сoach services</div>
+                </div> 
+                <form name="Sum">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="services__options d-flex justify-content-between align-items-center mt-5">
+                                    <label><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</label>
+                                    <label><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</label>
+                                <div class="services__to_book">
+                                    <input class="contact__variable_day ml-4"type="number"min="<1>"max="<10>"placeholder="1" >
+                                    <p class="contact__day mt-2">day =</p>
+                                    <input class="contact__variable "type="text"placeholder="120" >
+                                    <p class="contact__money mt-2">$</p>
+                                    <button class="button">to book</button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="ski__trainers section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                        <div class="sky__trainers_img order-12 ml-3">
+                            <img src="img/ski_trainers2.svg" alt="trainers">
+                        </div>
+                        <div class="cottage__wrap mr-auto">
+                        <div class="ski__trainers_title cottage__title">Ski trainer Alex.</div>
+                        <div class="cottage__text">
+                            Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.
+                            Сonsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore cottage.
+                          <div class="cottage__text_addition">Vacation with friends / Family sky trainer.</div> 
+                        </div>
                     </div>
                 </div>
-                <div class="services col-12 mt-4 d-flex justify-content-center align-items-center">
-                    <div class="title2">Сoach services</div>
+                    <div class="services col-12 mt-4 d-flex justify-content-center align-items-center">
+                        <div class="services_title amenities_title">Сoach services</div>
                     </div>
-                    <div class="services__options col-12 d-flex justify-content-between align-items-center mt-5">
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <p><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</p>
-                        <div class="services__to_book">
-                        <input class="contact__variable_day ml-4"type="number"placeholder="1" >
-                        <input class="contact__day "type="text"placeholder="day =" >
-                        <input class="contact__variable "type="text"placeholder="120" >
-                        <input class="contact__day "type="text"placeholder="$" >
-                        <button class="button">to book</button>
-                    </div>
-                    </div> 
+                    <form name="Sum">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="services__options d-flex justify-content-between align-items-center mt-5">
+                                        <label><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</label>
+                                        <label><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</label>
+                                        <label><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</label>
+                                        <label><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</label>
+                                        <label><input class="mark__button mr-4" type="checkbox" id="chetyre"/>  20m ad minim veniam</label>
+                                    <div class="services__to_book">
+                                        <input class="contact__variable_day ml-4"type="number"min="<1>"max="<10>"placeholder="1" >
+                                        <p class="contact__day mt-2">day =</p>
+                                        <input class="contact__variable "type="text"placeholder="120" >
+                                        <p class="contact__money mt-2">$</p>
+                                        <button class="button">to book</button>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </form> 
             </div>
         </div>
     </section>
@@ -298,15 +355,15 @@
                 <div class="col-12">
                     <div class="subtitle mb-5">about_us</div> 
                         <div class="about_us__img d-flex align-items-center">
-                            <div class="about_us__text cottage__text">
-                                <div class="title1">We love mountains.</div>
+                            <div class="about_us__text">
+                                <div class="about_us__title cottage__title">We love mountains.</div>
                                 12 we give happy emotions to our customers.   
                                 Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                <div class="about_us__wrap mt-5 col-8 d-flex justify-content-center">
-                                    <p><img class="about_mark" src="img/home(1)1.svg" alt="icon"> 76 cottages</p>
-                                    <p><img class="about_mark" src="img/route_1.svg" alt="icon"> 530 km of tracks</p>
-                                    <p><img class="about_mark ml-5" src="img/cable-car-cabin_1.svg" alt="icon"> 18 lifts</p>
-                                    <p><img class="about_mark ml-5" src="img/skiing1.1.svg" alt="icon"> 10 equipment options</p>    
+                                <div class="about_us__wrap mt-5 d-flex justify-content-center">
+                                    <div class="about_us__wrap_text d-flex align-items-center"><img class="about_mark" src="img/home(1)1.svg" alt="icon"> <span class="number">76</span>  cottages</div>
+                                    <div class="about_us__wrap_text d-flex align-items-center"><img class="about_mark" src="img/route_1.svg" alt="icon"> <span class="number">530</span> km of tracks</div>
+                                    <div class="about_us__wrap_text d-flex align-items-center"><img class="about_mark" src="img/cable-car-cabin_1.svg" alt="icon"> <span class="number">18</span> lifts</div>
+                                    <div class="about_us__wrap_text d-flex align-items-center"><img class="about_mark" src="img/skiing1.1.svg" alt="icon"> <span class="number">10</span> equipment options</div>    
                                 </div>
                             </div> 
                         </div>    
@@ -320,45 +377,66 @@
             <div class="row">
                 <div class="col-12">
                     <div class="subtitle mb-5">contacts</div> 
-                    <div class="contacts-wrap col-12 d-flex align-items-center">
-                        <div class="title3">contacts</div>
-                        <div class="contacts__text ml-5 col-5 cottage__text">
-                            <div class="title1">Ski resort «Ski paradise»,
-                                    Switzerland, Zermatt a/b 2135634</div>
-                                    Sales department : 0 800 210 000
-                                    Email: Ski paradise@com.ua
-                                    Technical support: 0 800 210 000
-                                    Email: Ski paradise@datagroup.ua
-                                    +38 (044) 584-49-07
-                                <li class="contacts__map mt-3"><a href="#" class="map__link ml-3">To show on the map</a>
+                    <div class="row">
+                        <div class="col-12 d-flex align-items-center">
+                        <div class="contacts-wrap ">
+                            <div class="contacts_title">contacts</div>
+                                <div class="contacts__text ml-5 cottage__text">
+                                    <div class="contacts_subtitle cottage__title ml-4">Ski resort «Ski paradise»,
+                                            Switzerland, Zermatt a/b 2135634</div>
+                                            <div class="sales ml-4">
+                                              Sales department : 0 800 210 000
+                                            Email: Ski paradise@com.ua
+                                            Technical support: 0 800 210 000
+                                            Email: Ski paradise@datagroup.ua
+                                            +38 (044) 584-49-07  
+                                            </div>
+                                        <div class="contacts__map ml-4 mt-3"><a href="#" class="map__link ml-3">To show on the map</a></div>  
+                                </div>
+                                <div class="consultation ml-4">
+                                    <input class="consultation__name contact__people mt-4"type="text" placeholder="Name" >
+                                    <input class="consultation__tel mt-4 ml-5"type="tel"placeholder="Tel" > 
+                                    <button class="consultation__button ml-5">To get the consultation</button>
+                                </div> 
                         </div>
-                        
-                        <div class="consultation">
-                            <input class="consultation__name contact__people mt-4"type="text" placeholder="Name" >
-                            <input class="consultation__tel mt-4 ml-5"type="tel"placeholder="Tel" > 
-                            <button class="consultation__button ml-5">To get the consultation</button>
-                        </div> 
+                      </div> 
                     </div>
-                   <hr width="300" color="blue">
+    
+                        <hr width="300" color="blue">
+
                     <div class="social mt-5 d-flex justify-content-center align-items-center">
-                        <a href="#" class="social__link"><img src="./img/twitter.svg" alt="twitter"></a>
-                            <a href="#" class="social__link ml-2"><img src="./img/instagram.svg" alt="instagram"></a>
-                                <a href="#" class="social__link ml-2"><img src="./img/facebook.svg" alt="facebook"></a>
+
+                        <li class="icon__twitter mr-4">
+                            <a href="#">
+                                <div class="social__link_twitter"></div>
+                            </a>
+                        </li>
+                        <li class="icon__instagram mr-4">
+                            <a href="#">
+                                <div class="social__link_instagram"></div>
+                            </a>
+                        </li>
+                        <li class="icon__facebook">
+                            <a href="#">
+                                <div class="social__link_facebook"></div>
+                            </a>
+                        </li>
                     </div> 
-                    <button class="button__back"><img src="./img/back_button.svg" alt="back"></button> 
+                    <button class="button__back button_white"><img src="./img/back_button.svg" alt="back"></button> 
                 </div>
             </div>
         </div>
     </section>
     <section class="footer d-flex justify-content-around align-items-center ">
-        <div class="footer__text d-flex justify-content-around align-items-center">
-            <p>+38 (044) 587-49-07 <br>
-            Email: Ski paradise@com.ua</p>
-            <p>Ski resort «Ski paradise» <br>
-                Switzerland, Zermatt a/b 2135634</p> 
+        <div class="footer__item d-flex justify-content-around align-items-center">
+            <a href="#" class="footer__link"> <p>+38 (044) 587-49-07 <br>
+            Email: Ski paradise@com.ua</p></a>
+            <a href="#" class="footer__link"> <p>Ski resort «Ski paradise» <br>
+                Switzerland, Zermatt a/b 2135634</p> </a>
         </div>
     </section>
     
+    <!-- <script src="script.js"></script> -->
     <script>
         var s = document.forms.Sum,
             d = s.querySelectorAll('input[type="checkbox"]:not([value]), input[type="checkbox"][value=""]');

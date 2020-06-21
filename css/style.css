@@ -21,23 +21,14 @@
 .button:hover {
     color: rgb(241, 168, 57);
 }
-.mark__button {
-    background-color: white;
-    border: none;
-}
-.button__calendar {
-    background-color: white;
-    border: none;
-}
-.button__triangle {
-    background-color: white;
-    border: none;
-}
 .button__back {
     position: absolute;
     left: -350px;
     background-color: white;
     border: none;
+}
+body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif, open-sans;
 }
 /* !первый экран */
 .header {
@@ -58,7 +49,6 @@
     margin-top: -10%;
 }
 .title_text {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif, open-sans;
     font-size: 42px;
     font-weight: 700;
     color: #4D4242;
@@ -211,12 +201,12 @@
 }
 
 /*! котеджи */
-.title1 {
+.cottage__title{
     font-size: 28px;
     font-weight: 700;
     line-height:1.55;
 }
-.title2 {
+.amenities_title {
     font-size: 26px;
     font-weight: 700;
 }
@@ -224,9 +214,7 @@
     font-size: 24px;
     font-weight: 400;
 }
-.cottage__wrap  {
-    margin-top: 120px;
-}
+
 .subtitle {
     width: 470px;
     height: 90px;
@@ -245,22 +233,24 @@ p {
     font-size: 23px;
     font-weight: 400;
     display: inline-block;
+    width: 400px;
 }
-.note {
+label {
+    font-size: 23px;
+    font-weight: 400;
+    display: inline-block;
+    width: 400px;
+    cursor: pointer !important;
+}
+.cottage__text_addition {
     font-size: 24px;
     font-weight: 600;
 }
 .options {
     flex-direction: column;
-    flex-wrap: wrap;
     width: 100%;
     max-height: 250px;
-}
-.to_book__menu {
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    max-height: 250px;
+
 }
 .contact__people {
     width: 300px;
@@ -311,10 +301,12 @@ p {
     height: 30px;
     transition: .3s;
 }
-
+.markup {
+    margin-left: 150px;
+}
 .contact__day {
-    width: 60px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
     color: #4D4242;
     font-size: 22px;
     padding: 5px;
@@ -340,13 +332,13 @@ p {
     width:100%;
     height: 550px; 
     text-decoration: none;
+    margin-top: 150px;
 }
 .discount__item {
     text-transform: uppercase;
     display: block;
     width: 570px;
     height: 240px;
-    font-family: "Montserrat", Arial, Helvetica, sans-serif, open-sans;
     font-size: 42px;
     font-weight: 700;
     position: absolute;
@@ -372,7 +364,7 @@ p {
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
-    max-height: 200px;
+    max-height: 185px;
 }
 .services__to_book {
     margin-left: 170px;
@@ -382,16 +374,17 @@ p {
  .about_us__img {
     height: 770px;
     width: 100%;
-    background-image: url(../img/about_us.svg);
+    background-image: url(../img/about_us.jpg);
     border-radius: 10px;
  }
  .about_us__text {
-     width: 560px;
-     height: 350px;
+     width: 550px;
+     height: 450px;
      font-size: 28px;
      margin-left: 140px;
      font-weight: 400;
      background-color: #F7F7F7;
+     line-height:1.55;
  }
  .about_us__wrap {
     flex-direction: column;
@@ -399,12 +392,20 @@ p {
     max-height: 180px;
     width: 100%;
  }
-
+.number {
+    font-size: 33px;
+    font-weight: 600;
+    margin: 0 10px 0 20px;
+}
+.about_us__wrap_text {
+    width: 450px;
+    height: 70px;
+}
  /* !контакты */
  .contacts-wrap  {
      height: 800px;
      width: 1440px;
-    background-image: url(../img/contacts\ .svg);
+    background-image: url(../img/contacts.jpg);
     border: none;
     border-radius: 10px;
  }
@@ -417,6 +418,7 @@ p {
     font-size: 23px;
     padding: 20px 60px -5px 30px;
     line-height:1.8;
+    margin-top: 180px;
 }
 .contacts__map {
     width: 400px;
@@ -427,6 +429,14 @@ p {
     border: none;
     display: block;
     background-color: white;
+}
+
+.contacts_subtitle{
+    padding: 20px 0 20px 0;
+}
+.sales {
+    width: 400px;
+    height: 200px;
 }
 .map__link {
    color:#3378C7; 
@@ -469,7 +479,7 @@ p {
 .consultation__button:hover {
     color: rgb(241, 168, 57);
 }
-.title3 {
+.contacts_title {
     position: absolute;
     top: 50px;
     font-size: 80px;
@@ -477,9 +487,51 @@ p {
     margin-left: 10%;
 }
 hr {
+    width: 570px;
     margin-top: 60px;
-    color: #3378C7;
-    width: 650px;
+}
+
+.social__link_twitter {
+    height: 40px;
+    width: 45px;
+    background-image: url(../img/twitter1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .3s ;
+}
+.icon__twitter:hover .social__link_twitter {
+    background-image: url(../img/twitter2.svg);
+}
+.icon__twitter {
+    display: block;
+}
+.social__link_instagram {
+    height: 40px;
+    width: 40px;
+    background-image: url(../img/instagram1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .3s ;
+}
+.icon__instagram:hover .social__link_instagram {
+    background-image: url(../img/instagram2.svg);
+}
+.icon__instagram {
+    display: block;
+}
+.social__link_facebook {
+    height: 40px;
+    width: 23px;
+    background-image: url(../img/facebook1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .3s ;
+}
+.icon__facebook:hover .social__link_facebook {
+    background-image: url(../img/facebook2.svg);
+}
+.icon__facebook {
+    display: block;
 }
 
  /*! футер */
@@ -487,8 +539,14 @@ hr {
      background-color: #3378C7;
      color: white;
  }
- .footer__text {
-     width: 100%;
-     padding: 25px 0 20px 0;
+ .footer__item {
+    width: 100%;
+    padding: 25px 0 20px 0;
+ }
+ .footer__link {
+     color: white;
+     transition: .3s ;
  } 
- 
+ .footer__link:hover {
+    color: rgb(241, 168, 57);
+}
