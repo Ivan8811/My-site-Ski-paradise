@@ -544,9 +544,17 @@ hr {
     padding: 25px 0 20px 0;
  }
  .footer__link {
-     color: white;
-     transition: .3s ;
+    font-size: 23px;
+    font-weight: 400;
+    display: inline-block;
+    width: 400px;
+    color: white;
+    transition: .3s ;
  } 
  .footer__link:hover {
     color: rgb(241, 168, 57);
+    text-decoration: none;
+}
+.address {
+   text-align: right; 
 }
